@@ -1,4 +1,4 @@
-export const hello = () => 'Hello world!'
+export const hello = () => 'Hello world!';
 
 export function sortAscending(tuples) {
     return tuples.sort((a, b) => {
@@ -8,4 +8,12 @@ export function sortAscending(tuples) {
         if (valueA > valueB) return 1;
         if (valueA < valueB) return -1;
     });
+}
+
+export function removeZeroes(tuples) {
+    const output = [];
+    tuples.forEach((tuple) => {
+        if (tuple[1] !== 0) output.push(tuple);
+        });
+    return output;
 }
